@@ -1,0 +1,33 @@
+header {
+    background-color: rgb(67, 9, 133);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: rgb(224, 233, 233);
+}
+
+footer {
+    background-color: rgb(56, 8, 110);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#points {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#log {
+    display: block;
+    text-align: center;
+}
