@@ -28,6 +28,7 @@ footer {
 }
 
 #log {
-    display: block;
+    display: flex;
     text-align: center;
+    flex-direction: column-reverse;
 }
