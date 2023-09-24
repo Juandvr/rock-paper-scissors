@@ -13,36 +13,74 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-
-const computerSelection = getComputerChoice();
+let playerScore = 0;
+let cpuScore = 0;
 
 function playRound(playerSelection, computerSelection) {
+
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
+    const log = document.getElementById("log");
+    const message = document.createElement("p");
+
     if (playerSelection == computerSelection) {
-        return "Tie";
+        message.textContent = "Tie";
+        log.appendChild(message);
     }
 
     if (computerSelection == "rock") {
         if (playerSelection == "paper") {
-            return "You won! Paper beats Rock";
+            message.textContent = `Player +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            playerScore++;
         } else if (playerSelection == "scissors") {
-            return "You lose! Rock beats Scissors";
+            message.textContent = `CPU +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            cpuScore++;
         }
     }
     if (computerSelection == "paper") {
         if (playerSelection == "rock") {
-            return "You lose! Paper beats Rock";
+            message.textContent = `CPU +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            cpuScore++;
         } else if (playerSelection == "scissors") {
-            return "You won! Scissors beats Paper";
+            message.textContent = `Player +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            playerScore++;
         }
     }
     if (computerSelection == "scissors") {
         if (playerSelection == "paper") {
-            return "You lose! Scissors beats Paper";
+            message.textContent = ` CPU +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            cpuScore++;
         } else if (playerSelection == "rock") {
-            return "You won! Rock beats Scissors";
+            message.textContent = `Player +1 - Player: ${playerSelection} - CPU: ${computerSelection}`;
+            log.appendChild(message);
+            playerScore++;
         }
     }
-}
+
+    if (playerScore == 5) {
+        message.textContent = "You Won!";
+    }
+    if (cpuScore == 5) {
+        message.textContent = "You Lose!";
+    }
+
+    const playerPoints = document.getElementById("playerPoints");
+    const cpuPoints = document.getElementById("cpuPoints");
+
+    playerPoints.textContent = playerScore;
+    cpuPoints.textContent = cpuScore;
+} 
+
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
+rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
+paper.addEventListener("click", () => playRound("paper", getComputerChoice()));
+scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()));
