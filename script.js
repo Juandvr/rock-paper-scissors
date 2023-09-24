@@ -13,7 +13,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-const playerSelection = prompt();
+
 const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
@@ -46,15 +46,3 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
-
-function game() {
-    let result = "";
-    for(let i = 1; i <= 5; i++){
-        result += `Round ${i}\n`
-        result += playRound(playerSelection, getComputerChoice());
-        result += "\n";
-    }
-    return result;
-}
-
-console.log(game());
