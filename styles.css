@@ -21,33 +21,43 @@ header {
 
 #marker {
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(2, auto);
     text-align: center;
 }
 
 #playerChoice, #cpuChoice {
-    grid-row: 2;
-    height: 10em;
-    width: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3;
+    height: 200px;
+    width: 200px;
     margin: 10px;
     border-radius: 15px;
     background-color: #4FAEF3;
+    font-size: 120px;
 }
 
 .choice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #2d9ff0;
     border-radius: 8px;
     margin: 7px;
-    height: 3em;
-    width: 3em;
+    height: 50px;
+    width: 50px;
     text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 30px;
 }
 
 .choice:hover {
     cursor: pointer;
-    height: 4em;
-    width: 4em;
+    height: 60px;
+    width: 60px;
+    font-size: 35px;
 }
 
 #points {
@@ -62,9 +72,8 @@ header {
 }
 
 #log {
-    display: flex;
-    text-align: center;
-    flex-direction: column-reverse;
+    grid-row: 2;
+    grid-column: 1 / span 2;
 }
 
 footer {
