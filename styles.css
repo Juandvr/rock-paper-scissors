@@ -1,19 +1,22 @@
-header {
-    background-color: rgb(67, 9, 133);
-    color: white;
-    display: flex;
-    justify-content: center;
-}
-
 body {
-    background-color: rgb(224, 233, 233);
+    background-color: #79C2F6;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-footer {
-    background-color: rgb(56, 8, 110);
-    color: white;
+header {
+    background-color: #4FAEF3;
+    box-shadow: 3px -20px 0 20px #4FAEF3;
+    color: black;
     display: flex;
     justify-content: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    min-height: 88vh;
 }
 
 #points {
@@ -31,4 +34,11 @@ footer {
     display: flex;
     text-align: center;
     flex-direction: column-reverse;
+}
+
+footer {
+    background-color: #4FAEF3;
+    box-shadow: 20px 0px 0 20px #4FAEF3;
+    color: black;
+    text-align: center;
 }
