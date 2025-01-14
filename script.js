@@ -65,11 +65,16 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 
+    const modal = document.getElementById("modalOverlay");
+    const modalText = document.getElementById("modalText");
+
     if (playerScore == 5) {
-        message.textContent = "You Won!";
+        modalText.textContent = "You Won!";
+        modal.classList.add("active");
     }
     if (cpuScore == 5) {
-        message.textContent = "You Lose!";
+        modalText.textContent = "You Lose!";
+        modal.classList.add("active");
     }
 
     const playerPoints = document.getElementById("playerPoints");
@@ -82,6 +87,12 @@ function playRound(playerSelection, computerSelection) {
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+
+const restart = document.getElementById("restart");
+
+restart.addEventListener("click", () => {
+    location.reload();
+})
 
 rock.addEventListener("click", () => playRound("rock", getComputerChoice()));
 paper.addEventListener("click", () => playRound("paper", getComputerChoice()));

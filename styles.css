@@ -76,6 +76,53 @@ header {
     grid-column: 1 / span 2;
 }
 
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  /* Modal Box */
+  .modal {
+    background: #4FAEF3;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%; /* Responsive width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
+  
+  .modal button {
+    background-color: #007bff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .modal button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Show the modal when active */
+  .modal-overlay.active {
+    display: flex;
+  }
+
 footer {
     background-color: #4FAEF3;
     box-shadow: 20px 0px 0 20px #4FAEF3;
