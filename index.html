@@ -12,14 +12,17 @@
 <body>
     <div id="content">
         <div id="points">
-            <p>Player: <span id="playerPoints"></span></p>
-            <p>CPU: <span id="cpuPoints"></span></p>
+            <div id="marker">
+                <p>Player: <span id="playerPoints">0</span></p>
+                <div id="playerChoice"></div>
+                <p>Computer: <span id="cpuPoints">0</span></p>
+                <div id="cpuChoice"></div>
+            </div>
         </div>
         <div id="game">
-            <p>Choose:</p>
-            <button id="rock">&#128074;</button>
-            <button id="paper">&#129306;</button>
-            <button id="scissors">&#9996;</button>
+            <div class="choice" id="rock">&#128074;</div>
+            <div class="choice" id="paper">&#129306;</div>
+            <div class="choice" id="scissors">&#9996;</div>
         </div>
         <div id="log">
         </div>

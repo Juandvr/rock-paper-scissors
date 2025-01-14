@@ -19,6 +19,37 @@ header {
     min-height: 88vh;
 }
 
+#marker {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    text-align: center;
+}
+
+#playerChoice, #cpuChoice {
+    grid-row: 2;
+    height: 10em;
+    width: 10em;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #4FAEF3;
+}
+
+.choice {
+    background-color: #2d9ff0;
+    border-radius: 8px;
+    margin: 7px;
+    height: 3em;
+    width: 3em;
+    text-align: center;
+}
+
+.choice:hover {
+    cursor: pointer;
+    height: 4em;
+    width: 4em;
+}
+
 #points {
     display: flex;
     justify-content: space-evenly;
